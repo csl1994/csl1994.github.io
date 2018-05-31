@@ -291,6 +291,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/PCA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CHSL">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/itachi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHSL">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/31/PCA/" itemprop="url">Principal Component Analysis</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-31T14:52:53+08:00">
+                2018-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h3><p>衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。<br>公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$</p>
+<h3 id="协方差矩阵"><a href="#协方差矩阵" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h3><p>协方差矩阵的每个元素是各个向量元素之间的协方差，是一个<strong>对称非负正定矩阵</strong>。<br>设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：</p>
+<script type="math/tex; mode=display">
+C=(c_{ij})_{n*n}=\left(\begin{matrix}
+c_{11} & c_{12} & \cdots & c_{1n}\\
+c_{21} & c_{22} & \cdots & c_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+c_{n1} & c_{n2} & \cdots & c_{nn}\\
+\end{matrix}
+\right)</script><p>其中，$c_{ij}=Cov(X_{i},X_{j}),i,j=1,2,…,n$</p>
+<h3 id="主成分分析（PCA）"><a href="#主成分分析（PCA）" class="headerlink" title="主成分分析（PCA）"></a>主成分分析（PCA）</h3><p>是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的<strong>标准正交特征</strong>上<br>1.将原始数据按行排列组成矩阵$X_{old}$<br>2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$<br>3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$<br>4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$<br>5.通过计算$Y=WX_{new}$，得到降维后数据$Y$</p>
+<p>$\underline{分析}$：利用超平面对样本进行表达需要考虑两个性质<br>(1)最近重构性，是指样本点到达平面的距离足够近；<br>(2)最大可分性，是指样本点在超平面的投影尽可能的区分开；<br>利用(2)，也就是$\sum_{i} D(Y_{i})$最大，<strong>即$\sum_{i}W^TX_{i}X_{i}^TW=\sum_{i}W^TC_{}iW$最大</strong>。协方差矩阵为实对称矩阵，且是半正定的，其对角线为$D(X_{i})$，所以能够相似对角化成$\lambda$组成的矩阵，故而将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/测试文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -623,7 +776,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -634,7 +787,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -645,7 +798,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -655,16 +808,6 @@
 
           
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/csl1994" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-            </div>
           
 
           
@@ -1220,6 +1363,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
