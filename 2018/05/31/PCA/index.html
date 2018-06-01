@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="image retrieval," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -77,18 +77,17 @@
 
 
 
-<meta name="description" content="协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：  C=(c_{ij})_{n*n}=\">
-<meta name="keywords" content="image retrieval">
+<meta name="description" content="Principal Component Analysis 方法01 协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 02 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Principal Component Analysis">
+<meta property="og:title" content="CHSL">
 <meta property="og:url" content="http://yoursite.com/2018/05/31/PCA/index.html">
 <meta property="og:site_name" content="CHSL">
-<meta property="og:description" content="协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：  C=(c_{ij})_{n*n}=\">
+<meta property="og:description" content="Principal Component Analysis 方法01 协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 02 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-31T06:56:21.281Z">
+<meta property="og:updated_time" content="2018-06-01T00:25:31.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Principal Component Analysis">
-<meta name="twitter:description" content="协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：  C=(c_{ij})_{n*n}=\">
+<meta name="twitter:title" content="CHSL">
+<meta name="twitter:description" content="Principal Component Analysis 方法01 协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 02 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随">
 
 
 
@@ -124,7 +123,7 @@
 
 
 
-  <title>Principal Component Analysis | CHSL</title>
+  <title> | CHSL</title>
   
 
 
@@ -312,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Principal Component Analysis</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -334,28 +333,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -384,8 +361,8 @@
       
 
       
-        <h3 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h3><p>衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。<br>公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$</p>
-<h3 id="协方差矩阵"><a href="#协方差矩阵" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h3><p>协方差矩阵的每个元素是各个向量元素之间的协方差，是一个<strong>对称非负正定矩阵</strong>。<br>设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：</p>
+        <h2 id="Principal-Component-Analysis-方法"><a href="#Principal-Component-Analysis-方法" class="headerlink" title="Principal Component Analysis 方法"></a>Principal Component Analysis 方法</h2><h3 id="01-协方差"><a href="#01-协方差" class="headerlink" title="01 协方差"></a>01 协方差</h3><p>衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。<br>公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$</p>
+<h3 id="02-协方差矩阵"><a href="#02-协方差矩阵" class="headerlink" title="02 协方差矩阵"></a>02 协方差矩阵</h3><p>协方差矩阵的每个元素是各个向量元素之间的协方差，是一个<strong>对称非负正定矩阵</strong>。<br>设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下：</p>
 <script type="math/tex; mode=display">
 C=(c_{ij})_{n*n}=\left(\begin{matrix}
 c_{11} & c_{12} & \cdots & c_{1n}\\
@@ -394,8 +371,9 @@ c_{21} & c_{22} & \cdots & c_{2n}\\
 c_{n1} & c_{n2} & \cdots & c_{nn}\\
 \end{matrix}
 \right)</script><p>其中，$c_{ij}=Cov(X_{i},X_{j}),i,j=1,2,…,n$</p>
-<h3 id="主成分分析（PCA）"><a href="#主成分分析（PCA）" class="headerlink" title="主成分分析（PCA）"></a>主成分分析（PCA）</h3><p>是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的<strong>标准正交特征</strong>上<br>1.将原始数据按行排列组成矩阵$X_{old}$<br>2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$<br>3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$<br>4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$<br>5.通过计算$Y=WX_{new}$，得到降维后数据$Y$</p>
+<h3 id="03-主成分分析（PCA）"><a href="#03-主成分分析（PCA）" class="headerlink" title="03 主成分分析（PCA）"></a>03 主成分分析（PCA）</h3><p>是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的<strong>标准正交特征</strong>上<br>1.将原始数据按行排列组成矩阵$X_{old}$<br>2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$<br>3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$<br>4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$<br>5.通过计算$Y=WX_{new}$，得到降维后数据$Y$</p>
 <p>$\underline{分析}$：利用超平面对样本进行表达需要考虑两个性质<br>(1)最近重构性，是指样本点到达平面的距离足够近；<br>(2)最大可分性，是指样本点在超平面的投影尽可能的区分开；<br>利用(2)，也就是$\sum_{i} D(Y_{i})$最大，<strong>即$\sum_{i}W^TX_{i}X_{i}^TW=\sum_{i}W^TC_{}iW$最大</strong>。协方差矩阵为实对称矩阵，且是半正定的，其对角线为$D(X_{i})$，所以能够相似对角化成$\lambda$组成的矩阵，故而将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$</p>
+<h3 id="PCA-Whitening"><a href="#PCA-Whitening" class="headerlink" title="PCA Whitening"></a>PCA Whitening</h3><p>图片中相邻像素间有很强大的相关性，输入的数据有很多冗余的成分，白化处理可以消除这种冗余，PCA就是其中一种方法(ZCA)。白化操作使得(1)特征之间的相关性较低(2)特征的方差一致。<br>步骤：采用PCA的方法<br>(1)可以考虑取全部的特征向量，而不是前$k$个，这样就不会降维(PCA)<br>(2)方差一致，计算公式为$X_{PCAwhite}=\frac{C}{\sqrt C}$，也可以$X_{PCAwhite}=\frac{C}{\sqrt {\lambda+\epsilon}}$，$\epsilon$为了避免$\lambda$过小</p>
 
       
     </div>
@@ -410,12 +388,6 @@ c_{n1} & c_{n2} & \cdots & c_{nn}\\
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/image-retrieval/" rel="tag">image retrieval</a>
-          
-        </div>
       
 
       
@@ -526,7 +498,7 @@ c_{n1} & c_{n2} & \cdots & c_{nn}\\
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -537,7 +509,7 @@ c_{n1} & c_{n2} & \cdots & c_{nn}\\
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -570,7 +542,7 @@ c_{n1} & c_{n2} & \cdots & c_{nn}\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#协方差"><span class="nav-number">1.</span> <span class="nav-text">协方差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协方差矩阵"><span class="nav-number">2.</span> <span class="nav-text">协方差矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主成分分析（PCA）"><span class="nav-number">3.</span> <span class="nav-text">主成分分析（PCA）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Principal-Component-Analysis-方法"><span class="nav-number">1.</span> <span class="nav-text">Principal Component Analysis 方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01-协方差"><span class="nav-number">1.1.</span> <span class="nav-text">01 协方差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02-协方差矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">02 协方差矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#03-主成分分析（PCA）"><span class="nav-number">1.3.</span> <span class="nav-text">03 主成分分析（PCA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PCA-Whitening"><span class="nav-number">1.4.</span> <span class="nav-text">PCA Whitening</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1122,26 +1094,6 @@ c_{n1} & c_{n2} & \cdots & c_{nn}\\
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
