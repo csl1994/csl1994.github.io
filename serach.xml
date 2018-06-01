@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[Principal Component Analysis]]></title>
     <url>%2F2018%2F05%2F31%2FPCA%2F</url>
-    <content type="text"><![CDATA[Principal Component Analysis 方法协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下： C=(c_{ij})_{n*n}=\left(\begin{matrix} c_{11} & c_{12} & \cdots & c_{1n}\\ c_{21} & c_{22} & \cdots & c_{2n}\\ \vdots & \vdots & \ddots & \vdots\\ c_{n1} & c_{n2} & \cdots & c_{nn}\\ \end{matrix} \right)其中，$c_{ij}=Cov(X_{i},X_{j}),i,j=1,2,…,n$ PCA是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的标准正交特征上1.将原始数据按行排列组成矩阵$X_{old}$2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$5.通过计算$Y=WX_{new}$，得到降维后数据$Y$ $\underline{分析}$：利用超平面对样本进行表达需要考虑两个性质(1)最近重构性，是指样本点到达平面的距离足够近；(2)最大可分性，是指样本点在超平面的投影尽可能的区分开；利用(2)，也就是$\sum_{i} D(Y_{i})$最大，即$\sum_{i}W^TX_{i}X_{i}^TW=\sum_{i}W^TC_{}iW$最大。协方差矩阵为实对称矩阵，且是半正定的，其对角线为$D(X_{i})$，所以能够相似对角化成$\lambda$组成的矩阵，故而将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$ PCA Whitening图片中相邻像素间有很强大的相关性，输入的数据有很多冗余的成分，白化处理可以消除这种冗余，PCA就是其中一种方法(ZCA)。白化操作使得(1)特征之间的相关性较低(2)特征的方差一致。步骤：采用PCA的方法(1)可以考虑取全部的特征向量，而不是前$k$个，这样就不会降维(PCA)(2)方差一致，计算公式为$X_{PCAwhite}=\frac{C}{\sqrt C}$，也可以$X_{PCAwhite}=\frac{C}{\sqrt {\lambda+\epsilon}}$，$\epsilon$为了避免$\lambda$过小]]></content>
+    <content type="text"><![CDATA[协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下： C=(c_{ij})_{n*n}=\left(\begin{matrix} c_{11} & c_{12} & \cdots & c_{1n}\\ c_{21} & c_{22} & \cdots & c_{2n}\\ \vdots & \vdots & \ddots & \vdots\\ c_{n1} & c_{n2} & \cdots & c_{nn}\\ \end{matrix} \right)其中，$c_{ij}=Cov(X_{i},X_{j}),i,j=1,2,…,n$ PCA是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的标准正交特征上1.将原始数据按行排列组成矩阵$X_{old}$2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$5.通过计算$Y=WX_{new}$，得到降维后数据$Y$ $\underline{分析}$：利用超平面对样本进行表达需要考虑两个性质(1)最近重构性，是指样本点到达平面的距离足够近；(2)最大可分性，是指样本点在超平面的投影尽可能的区分开；利用(2)，也就是$\sum_{i} D(Y_{i})$最大，即$\sum_{i}W^TX_{i}X_{i}^TW=\sum_{i}W^TC_{}iW$最大。协方差矩阵为实对称矩阵，且是半正定的，其对角线为$D(X_{i})$，所以能够相似对角化成$\lambda$组成的矩阵，故而将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$ PCA Whitening图片中相邻像素间有很强大的相关性，输入的数据有很多冗余的成分，白化处理可以消除这种冗余，PCA就是其中一种方法(ZCA)。白化操作使得(1)特征之间的相关性较低(2)特征的方差一致。步骤：采用PCA的方法(1)可以考虑取全部的特征向量，而不是前$k$个，这样就不会降维(PCA)(2)方差一致，计算公式为$X_{PCAwhite}=\frac{C}{\sqrt C}$，也可以$X_{PCAwhite}=\frac{C}{\sqrt {\lambda+\epsilon}}$，$\epsilon$为了避免$\lambda$过小]]></content>
+      <categories>
+        <category>deep learning</category>
+      </categories>
+      <tags>
+        <tag>image retrieval</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[测试标题]]></title>
