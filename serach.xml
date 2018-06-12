@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[乱]]></title>
+    <url>%2F2018%2F06%2F12%2F%E4%B9%B1%2F</url>
+    <content type="text"><![CDATA[感觉脑子有点乱从来到实验室到现在有两个多月的时间。先是在C区5楼看马新柱之前的工作（大多是一些网络结构的论文）和深度学习的基础知识（conv、pooling、BP、loss）之类的东西，期间还去参加了valse2018，这一段时间感觉挺充实的学到的东西也比较多，谈不上特别深刻，但是对于CNN在自己的脑海中有了一个成型的认识。在五一之后，开始看一些检索的论文。感觉一切都是从头开始，因为个人认为之前关于网络结构的论文对于检索的理解没有很大的帮助，所以没有知识的累积起步特别困难。检索的相关有一个比赛，在比赛中我负责的是标注数据~~~茫茫然。但是比赛毕竟是有分工的，而且分好的数据在训练之后取得的检测效果不错所以也比较满意。但是数据又要面临第二次处理，也就进入了六月。YOLOv3一个识别领域应用极为广泛的作品，我也开始学习了，因为不得其法所以论文看起来很费劲，但是应用完全是两个概念，虽然我用第二次处理的数据产生的训练效果不好但总算能用一用这个东西。如此乱也就来，分类-检测-检索我究竟干了啥？我自己能干啥？我想干啥？]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Principal Component Analysis]]></title>
     <url>%2F2018%2F05%2F31%2FPCA%2F</url>
     <content type="text"><![CDATA[协方差衡量两个变量的总体误差,从数值来看，协方差的数值越大，两个变量同向程度也就越大。反之亦然。公式 $Cov(X,Y)=E(X-E(X))(Y-E(Y)) =EXY-EXEY$ 协方差矩阵协方差矩阵的每个元素是各个向量元素之间的协方差，是一个对称非负正定矩阵。设$X=(X_{1},X_{2},…,X_{n})^T$为n维随机变量，则有协方差矩阵$C$如下： C=(c_{ij})_{n*n}=\left(\begin{matrix} c_{11} & c_{12} & \cdots & c_{1n}\\ c_{21} & c_{22} & \cdots & c_{2n}\\ \vdots & \vdots & \ddots & \vdots\\ c_{n1} & c_{n2} & \cdots & c_{nn}\\ \end{matrix} \right)其中，$c_{ij}=Cov(X_{i},X_{j}),i,j=1,2,…,n$ PCA是一种降维方法，PCA的思想是将$n$维的特征映射到$k$维的标准正交特征上1.将原始数据按行排列组成矩阵$X_{old}$2.对$X_{old}$进行数据标准化，使其均值变为零$X_{new}$3.求$X_{new}$的协方差矩阵$C,C=X_{new}X_{new}^T$4.将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$5.通过计算$Y=WX_{new}$，得到降维后数据$Y$ $\underline{分析}$：利用超平面对样本进行表达需要考虑两个性质(1)最近重构性，是指样本点到达平面的距离足够近；(2)最大可分性，是指样本点在超平面的投影尽可能的区分开；利用(2)，也就是$\sum_{i} D(Y_{i})$最大，即$\sum_{i}W^TX_{i}X_{i}^TW=\sum_{i}W^TC_{i}W$最大。协方差矩阵为实对称矩阵，且是半正定的，其对角线为$D(X_{i})$，所以能够相似对角化成$\lambda$组成的矩阵，故而将特征向量$\alpha$按特征值$\lambda$由大到小排列，取前$k$个按行组成矩阵$W$ PCA Whitening图片中相邻像素间有很强大的相关性，输入的数据有很多冗余的成分，白化处理可以消除这种冗余，PCA就是其中一种方法(ZCA)。白化操作使得(1)特征之间的相关性较低(2)特征的方差一致。步骤：采用PCA的方法(1)可以考虑取全部的特征向量，而不是前$k$个，这样就不会降维(PCA)(2)方差一致，计算公式为$X_{PCAwhite}=\frac{C}{\sqrt C}$，也可以$X_{PCAwhite}=\frac{C}{\sqrt {\lambda+\epsilon}}$，$\epsilon$为了避免$\lambda$过小]]></content>
@@ -22,18 +33,6 @@
         <tag>code</tag>
         <tag>image</tag>
         <tag>link</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F02%2F11%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
 </search>
