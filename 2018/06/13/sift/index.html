@@ -87,7 +87,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdn.net/20180613132518476?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE3MzUxMDY3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180613132604195?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE3MzUxMDY3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-06-13T11:20:15.692Z">
+<meta property="og:updated_time" content="2018-06-13T11:23:37.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SIFT">
 <meta name="twitter:description" content="Scale-space Extrema Detection在这个阶段，主要是侦测兴趣点，也就是SIFT架构中的关键点。 1.1 尺度空间：高斯模糊$G(x,y,k\sigma)=\frac{1}{2\pi\sigma^2}e^{-(x^2+y^2)/2\sigma^2}$与原图$I(x,y)$的乘积 L(x,y,k\sigma)=G(x,y,k\sigma)*I(x,y)模糊与特征的关系 1.2">
@@ -402,7 +402,7 @@ D_{xy}&D_{yy}
 <script type="math/tex; mode=display">R=\frac{Tr(H)^2}{Det(H)}=\frac{(\alpha+\beta)^2}{\alpha\beta}=\frac{(r+1)^2}{r}，其中r=\alpha/\beta</script><p>依据函数的性质可知在$\alpha=\beta$时有最小值，当$r&gt;1$且逐渐增大时，函数值逐渐增大，因此设阈值$r_{t}$，当$R&gt;(r_t+1)^2/r_t$时舍去关键点。</p>
 <h3 id="Orientation-Assignment"><a href="#Orientation-Assignment" class="headerlink" title="Orientation Assignment"></a>Orientation Assignment</h3><p>3.1 依据公式计算出关键点邻域像素的幅值和幅角</p>
 <script type="math/tex; mode=display">m(x,y)=\sqrt{(L(x+1,y)-L(x-1,y))^2+(L(x,y+1)-L(x,y-1))^2}</script><script type="math/tex; mode=display">\theta(x,y)=atan2((L(x,y+1)-L(x,y-1),L(x+1,y)-L(x-1,y))</script><p>将圆周以10°（45°）为单位划分36（8）等份统计直方图（横轴为方向角，纵轴为幅值累加），将最大值作为此关键点的主方向，若是最值与局部极值相差20%以内则为辅方向。<br><a href="https://blog.csdn.net/j56754gefge/article/details/46755565" target="_blank" rel="noopener">幅值、幅角</a></p>
-<h3 id="Keypoint-Descriptor"><a href="#Keypoint-Descriptor" class="headerlink" title="Keypoint Descriptor"></a>Keypoint Descriptor</h3><p>4.1 将3中关键点的邻域的x轴旋转与主方向一致，保证特征的$\underline{方向}$不变性。以4<em>4的区域的8个方向的梯度直方图为一个种子点，在关键点周围16</em>16的区域共有4<em>4</em>8个数据。最后进行归一化处理，除去光照影响。</p>
+<h3 id="Keypoint-Descriptor"><a href="#Keypoint-Descriptor" class="headerlink" title="Keypoint Descriptor"></a>Keypoint Descriptor</h3><p>4.1 将3中关键点的邻域的x轴旋转与主方向一致，保证特征的$\underline{方向}$不变性。以4$<em>$4的区域的8个方向的梯度直方图为一个种子点，在关键点周围16$</em>$16的区域共有4$<em>$4$</em>$8个数据。最后进行归一化处理，除去光照影响。</p>
 <h3 id="Keypoint-Matching"><a href="#Keypoint-Matching" class="headerlink" title="Keypoint Matching"></a>Keypoint Matching</h3>
       
     </div>
